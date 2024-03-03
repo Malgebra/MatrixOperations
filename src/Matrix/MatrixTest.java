@@ -1,5 +1,6 @@
 package Matrix;
 
+import org.junit.After;
 import org.junit.jupiter.api.Test;
 
 import junit.framework.TestCase;
@@ -13,13 +14,14 @@ class MatrixTest extends TestCase{
 	protected void setUp() {
 		m =3;
 		n =3;
-		new Matrix(m, n);
+		M = new Matrix(m, n);
 		
 	}
 	@Test
-	void testMatrix(int m, int n) {
-		for(int j=0;j<m;j++) {
-			for(int i=0;i<m;i++) {
+	@After
+	void testMatrix() {
+		for(int j=0;j<M.rows;j++) {
+			for(int i=0;i<M.cols;i++) {
 				if(M.equations[i][j] != 0) {
 					fail("Matrix Generation Error");
 				}
