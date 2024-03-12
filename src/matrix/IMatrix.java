@@ -5,5 +5,5 @@ public interface IMatrix {
 	int getRows();
 	int getCols();
 	void setRows(int rows);
-	
+	boolean equals(Matrix B);
 }

@@ -1,5 +1,6 @@
 package main;
 
+import exceptions.MatrixException;
 import matrix.Matrix;
 import matrix.display.MatrixDisplay;
 import matrix.operations.MatrixSum;
@@ -12,7 +13,12 @@ public class Main {
 		MatrixDisplay.displayMatrix(A);
 		A.transpose();
 		MatrixDisplay.displayMatrix(A);
-		A = MatrixSum.sum(A, A);
+		try {
+			A = MatrixSum.sum(A, A);
+		} catch (MatrixException e) {
+			System.out.print("Matrix Error");
+			e.printStackTrace();
+		}
 		MatrixDisplay.displayMatrix(A); 
 	}
 	
