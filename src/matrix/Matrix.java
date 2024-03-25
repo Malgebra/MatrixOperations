@@ -3,7 +3,7 @@ package matrix;
 public class Matrix implements IMatrix{
 	int rows;
 	int cols;
-	int[][] equations;
+	double[][] equations;
 	
 	/**
 	 * Transpose Operation on a Matrix A
@@ -13,7 +13,7 @@ public class Matrix implements IMatrix{
 	public Matrix(int rows, int columns) {
 		setRows(rows);
 		setCols(columns);
-		this.equations = new int[rows][columns];
+		this.equations = new double[rows][columns];
 		for(int i =0; i < rows; i++) {
 			for(int j =0; j < columns; j++) {
 				this.equations[i][j] = 0;
@@ -21,7 +21,7 @@ public class Matrix implements IMatrix{
 		}
 	}
 	
-	public Matrix(int[][] equations) {
+	public Matrix(double[][] equations) {
 		setEquations(equations);
 		setRows(equations.length);
 		setCols(equations[0].length);
@@ -42,8 +42,8 @@ public class Matrix implements IMatrix{
 		 * Array to hold current set of equations
 		 * Before transposing
 		 */
-		int[][] eq = this.getEquations();
-		int[][] eq_transpose = new int[this.getRows()][this.getCols()];
+		double[][] eq = this.getEquations();
+		double[][] eq_transpose = new double[this.getRows()][this.getCols()];
 		
 		for(int i = 0; i< m; i++) {
 			for(int j = 0; j< m; j++) {
@@ -72,11 +72,11 @@ public class Matrix implements IMatrix{
 		this.cols = cols;
 	}
 
-	public int[][] getEquations() {
+	public double[][] getEquations() {
 		return equations;
 	}
 
-	public void setEquations(int[][] equations) {
+	public void setEquations(double[][] equations) {
 		this.equations = equations;
 	}
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package matrix;
+package tests;
 
 import static org.junit.Assert.*;
 
@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import junit.framework.TestCase;
+import matrix.Matrix;
 
 /**
  * 
@@ -32,9 +33,9 @@ public class MatrixTest extends TestCase{
 	public void testMatrix() {
 		for(int j=0;j<M.getRows();j++) {
 			for(int i=0;i<M.getCols();i++) {
-//				if(M.getEquations()[i][j] != 0) {
-//					fail("Matrix Generation Error");
-//				}
+				if(M.getEquations()[i][j] != 0) {
+					fail("Matrix Generation Error");
+				}
 				assertEquals(M.getEquations()[i][j], 0);
 			}
 			

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package matrix.operations;
+package tests;
 
 import static org.junit.Assert.*;
 
@@ -11,6 +11,7 @@ import exceptions.MatrixException;
 import junit.framework.TestCase;
 import matrix.Matrix;
 import matrix.display.MatrixDisplay;
+import matrix.operations.MatrixSum;
 
 /**
  * 
@@ -29,10 +30,10 @@ public class MatrixSumsTest extends TestCase {
 	@Override
 	protected void setUp() {
 		// Matrix 4x4
-		A = new Matrix(new int[][] {{1,2,3,4},{3,2,1,4}, {4,4,4,4}, {5,2,1,2}});
-		B = new Matrix(new int[][] {{0,8,6,3},{3,2,3,3}, {1,1,1,4}, {3,2,3,2}});
+		A = new Matrix(new double[][] {{1,2,3,4},{3,2,1,4}, {4,4,4,4}, {5,2,1,2}});
+		B = new Matrix(new double[][] {{0,8,6,3},{3,2,3,3}, {1,1,1,4}, {3,2,3,2}});
 		// Matrix 3x4
-		C = new Matrix(new int[][] {{3,2,3,3}, {1,1,1,4}});
+		C = new Matrix(new double[][] {{3,2,3,3}, {1,1,1,4}});
 		D = A;	
 	}
 
