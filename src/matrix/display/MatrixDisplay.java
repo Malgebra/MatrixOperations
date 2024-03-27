@@ -4,7 +4,11 @@ import matrix.Matrix;
 
 public class MatrixDisplay {
 	
+	/**
+	 * Method to print the matrix when from CLI
+	 */
 	public static void displayMatrix(Matrix M){		
+		
 		System.out.println("[");
 		for(int i = 0; i< M.getRows(); i++) {
 			

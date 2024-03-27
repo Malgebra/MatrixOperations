@@ -22,27 +22,14 @@ public class Vector implements VectorI {
 	}
 	
 
-	@Override
-	public double dotProduct(Vector v) {
-		int m = this.getElemNo();
-		int n = v.getElemNo();
-		double[] result = new double[m];
-		
-		if(m == n) {
-			for(int i = 0; i < m; i++) {
-				result[i] = v.getElement(i) * this.getElement(i);
-			}
-		}
-		
-		return 0;
-	}
+
 
 
 /**
  * Returns the amount of elements contained in this vector.
  */
 	@Override
-	public int getElemNo() {
+	public int getN() {
 		return this.elements.length;
 	}
 

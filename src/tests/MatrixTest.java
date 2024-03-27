@@ -36,7 +36,7 @@ public class MatrixTest extends TestCase{
 				if(M.getEquations()[i][j] != 0) {
 					fail("Matrix Generation Error");
 				}
-				assertEquals(M.getEquations()[i][j], 0);
+				assertEquals(M.getEquations()[i][j], 0.0, 0.0);
 			}
 			
 		}
