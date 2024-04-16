@@ -91,4 +91,62 @@ public class Matrix implements IMatrix{
 		}
 		return true;
 	}
+
+	@Override
+	public boolean checkDimensions() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public ROC_Index findMostZeroes() {
+		int currentZeroes = 0;
+		int maxZeroes = 0;
+		ROC_Index roc = new ROC_Index();
+		double[][] equations = this.getEquations();
+		/**
+		 * This iteration will check for rows with the most zeroes
+		 */
+		for(int i = 0; i < this.rows; i++) {
+			for(int j = 0; j < this.cols; j++) {
+				if(equations[i][j] == 0)
+					currentZeroes++;	
+				if(currentZeroes > maxZeroes) {
+					roc = new ROC_Index('r', i);
+					maxZeroes = currentZeroes;
+				}
+			}
+		}
+		
+		/**
+		 * This iteration will check for rows with the most zeroes
+		 */
+		for(int i = 0; i < this.rows; i++) {
+			for(int j = 0; j < this.cols; j++) {
+				if(equations[i][j] == 0)
+					currentZeroes++;	
+				if(currentZeroes > maxZeroes) {
+					roc = new ROC_Index('r', i);
+					maxZeroes = currentZeroes;
+				}
+			}
+		}
+		/**
+		 * This iteration will check for columns with the most zeroes
+		 */
+		for(int i = 0; i < this.rows; i++) {
+			for(int j = 0; j < this.cols; j++) {
+				if(equations[j][i] == 0)
+					currentZeroes++;	
+				if(currentZeroes > maxZeroes) {
+					roc = new ROC_Index('c', j);
+					maxZeroes = currentZeroes;
+				}
+			}
+		}
+		
+		
+		
+		return roc;
+	}
 }

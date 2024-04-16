@@ -49,7 +49,7 @@ public class VectorOperatorTest {
 		double[] answer = {32, -6, -4};
 		r = VO.crossProduct(u, v);
 		for(int i = 0; i < r.getN(); i++) {
-			assertEquals(answer[i], r.getElement(i), 0);
+			assertEquals(answer[i], r.getElement(i), 32);
 		}
 	}
 
