@@ -6,4 +6,6 @@ public interface IMatrix {
 	int getCols();
 	void setRows(int rows);
 	boolean equals(Matrix B);
+	boolean checkDimensions();
+	ROC_Index findMostZeroes();
 }

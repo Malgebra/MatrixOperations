@@ -6,6 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+<<<<<<< HEAD
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="C:/Users/eguzm/.p2/pool/plugins/org.junit_4.13.2.v20230809-1000.jar">
@@ -13,5 +14,8 @@
 			<attribute name="javadoc_location" value="http://junit.org/junit4/javadoc/latest/"/>
 		</attributes>
 	</classpathentry>
+=======
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+>>>>>>> origin/UI
 	<classpathentry kind="output" path="bin"/>
 </classpath>
