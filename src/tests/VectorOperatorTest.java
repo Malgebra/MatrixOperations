@@ -44,13 +44,4 @@ public class VectorOperatorTest {
 		VO = null;
 	}
 
-	@Test
-	public void testCrossProduct() {
-		double[] answer = {32, -6, -4};
-		r = VO.crossProduct(u, v);
-		for(int i = 0; i < r.getN(); i++) {
-			assertEquals(answer[i], r.getElement(i), 0);
-		}
-	}
-
 }

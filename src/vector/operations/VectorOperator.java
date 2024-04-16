@@ -18,14 +18,14 @@ public class VectorOperator {
 		return result;
 	}
 	
-	public Vector crossProduct(Vector u, Vector v) {
-		double[] result = new double[3];
-		int n = u.getN();
-		for(int i = 0; i < n; i++) {
-			result[i] = u.getElement(i) * v.getElement(i);
-		}
-		return new Vector(result);
-		
-	}
-	
+//	public Vector crossProduct(Vector u, Vector v) {
+//		double[] result = new double[3];
+//		int n = u.getN();
+//		for(int i = 0; i < n; i++) {
+//			result[i] = u.getElement(i) * v.getElement(i);
+//		}
+//		return new Vector(result);
+//		
+//	}
+//	
 }
