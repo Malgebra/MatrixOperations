@@ -5,9 +5,19 @@ import matrix.Matrix;
 public class MatrixDisplay {
 	
 	/**
+	 * Matrix to hold and display. This matrix can be changed with the setMatrixDisplay function.
+	 * 
+	 */
+	Matrix M;
+	
+	public MatrixDisplay(Matrix B) {
+		setMatrix(B);
+	}
+	
+	/**
 	 * Method to print the matrix when from CLI
 	 */
-	public static void displayMatrix(Matrix M){		
+	public void displayMatrix(){		
 		
 		System.out.println("[");
 		for(int i = 0; i< M.getRows(); i++) {
@@ -21,5 +31,9 @@ public class MatrixDisplay {
 			System.out.println();
 		}
 		System.out.println("]");
+	}
+	
+	public void setMatrix(Matrix A) {
+		M = A;
 	}
 }

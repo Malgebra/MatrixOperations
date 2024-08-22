@@ -80,8 +80,12 @@ public class Matrix implements IMatrix{
 		this.equations = equations;
 	}
 
+	// TODO -> Throw exception if matrices are not the same size
 	@Override
 	public boolean equals(Matrix B) {
+		if(this.getCols() != B.getCols() && this.getRows() != B.getRows()) {
+			return false;
+		}
 		for(int i =0; i < this.getRows(); i++) {
 			for(int j =0; j < this.getCols(); j++) {
 				if(this.getEquations()[i][j] != B.getEquations()[i][j]) {
