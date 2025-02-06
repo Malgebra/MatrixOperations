@@ -3,7 +3,6 @@ package matrix.display;
 import matrix.Matrix;
 
 public class MatrixDisplay {
-	
 	/**
 	 * Matrix to hold and display. This matrix can be changed with the setMatrixDisplay function.
 	 * 
@@ -20,9 +19,9 @@ public class MatrixDisplay {
 	public void displayMatrix(){		
 		
 		System.out.println("[");
-		for(int i = 0; i< M.getRows(); i++) {
-			
+		for(int i = 0; i< M.getRows(); i++) {		
 			for(int j = 0; j< M.getCols(); j++) {
+				
 				System.out.print(M.getEquations()[i][j]);
 				if(i == 3 && i ==j) {
 					System.out.println();
@@ -36,4 +35,5 @@ public class MatrixDisplay {
 	public void setMatrix(Matrix A) {
 		M = A;
 	}
+
 }

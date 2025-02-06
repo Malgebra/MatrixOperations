@@ -15,12 +15,6 @@ public class ROC_Index {
 
 
 
-
-
-
-
-
-
 	// 	GETTERS AND SETTERS
 	public int getIndex() {
 		return index;
